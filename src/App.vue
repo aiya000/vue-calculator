@@ -1,23 +1,19 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <Calculator />
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from './components/HelloWorld.vue'
 
-@Component({
-  components: {
-    HelloWorld
-  }
-})
+import { Component, Vue } from 'vue-property-decorator'
+import Calculator from './components/Calculator.vue'
+
+@Component({ components: { Calculator } })
 export default class App extends Vue {}
+
 </script>
 
 <style lang="scss">
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,4 +22,5 @@ export default class App extends Vue {}
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
