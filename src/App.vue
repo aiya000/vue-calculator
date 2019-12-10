@@ -1,5 +1,8 @@
 <template>
-  <Calculator />
+    <div>
+        <p>result value is {{ result.value }}</p>
+        <Calculator :result="result" />
+    </div>
 </template>
 
 <script lang="ts">
@@ -8,7 +11,9 @@ import { Component, Vue } from 'vue-property-decorator'
 import Calculator from './components/Calculator.vue'
 
 @Component({ components: { Calculator } })
-export default class App extends Vue {}
+export default class App extends Vue {
+  public result = { value: 0 }
+}
 
 </script>
 
